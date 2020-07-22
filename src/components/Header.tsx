@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import AppBar from "@material-ui/core/AppBar";
+import Link from "@material-ui/core/Link";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
@@ -12,6 +13,7 @@ import {
 } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -86,7 +88,9 @@ const Header: FC<{ title: string }> = ({ title }) => {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            {title}
+            <Link component={RouterLink} to="/" color="secondary">
+              {title}
+            </Link>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
