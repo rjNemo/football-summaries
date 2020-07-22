@@ -10,5 +10,5 @@ export default interface IGame extends IVideo {
   side2: ISide;
   competition: ICompetition;
   videos: IVideo[];
-  id: string;
+  id: number;
 }
