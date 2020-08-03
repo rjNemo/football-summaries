@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Container } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 
 import { withGame, IGameState } from "../store/GameProvider";
 
@@ -11,9 +11,13 @@ const MatchList: FC<IGameState> = ({ games, loading }) =>
     <Loader />
   ) : (
     <Container>
-      {games.map((game, i) => (
-        <MatchItem key={i} {...game} id={i} />
-      ))}
+      <Grid container justify="center" spacing={3}>
+        {games.map((game, i) => (
+          <Grid key={i} item xs={3}>
+            <MatchItem {...game} id={i} />
+          </Grid>
+        ))}
+      </Grid>
     </Container>
   );
 
