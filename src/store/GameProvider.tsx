@@ -9,6 +9,7 @@ export interface IGameState {
   loading: boolean;
   setGames: React.Dispatch<React.SetStateAction<IGame[]>>;
   selectGameByID: (slug: string) => IGame;
+  filterGamesByText: (text: string) => void;
 }
 
 export const GameContext = createContext<IGameState>({
@@ -18,6 +19,7 @@ export const GameContext = createContext<IGameState>({
   selectGameByID: () => {
     return {} as IGame;
   },
+  filterGamesByText: () => {},
 });
 
 const GameProvider: FC = ({ children }) => {
@@ -26,9 +28,11 @@ const GameProvider: FC = ({ children }) => {
 
   const selectGameByID = (slug: string): IGame => {
     const id = parseInt(slug);
-    const game = games[id];
-    return game;
+    return games[id];
   };
+
+  const filterGamesByText = (text: string): void =>
+    setGames(games.filter((g) => g.title.includes(text)));
 
   useEffect(() => {
     apiClient
@@ -39,13 +43,14 @@ const GameProvider: FC = ({ children }) => {
       })
       .catch((err) => {
         setLoading(false);
-        console.error(err);
         return <div>{JSON.stringify(err, null, 2)}</div>;
       });
   }, []);
 
   return (
-    <GameContext.Provider value={{ games, loading, setGames, selectGameByID }}>
+    <GameContext.Provider
+      value={{ games, loading, setGames, selectGameByID, filterGamesByText }}
+    >
       {children}
     </GameContext.Provider>
   );

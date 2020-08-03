@@ -1,18 +1,9 @@
 import React, { FC } from "react";
 import Moment from "react-moment";
-import { Container, Typography, makeStyles } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 
-import IGame from "../types/Game";
-
-const useStyles = makeStyles({
-  root: {
-    marginTop: "16px",
-    marginBottom: "16px",
-  },
-  video: {
-    marginTop: "16px",
-  },
-});
+import IGame from "../../types/Game";
+import useStyles from "./styles";
 
 const MatchFull: FC<{ game: IGame }> = ({ game }) => {
   const classes = useStyles();

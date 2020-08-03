@@ -1,14 +1,7 @@
 import React, { FC } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-const useStyles = makeStyles({
-  root: {
-    position: "absolute",
-    top: "50vh",
-    left: "50vw",
-  },
-});
+import useStyles from "./styles";
 
 const Loader: FC = () => {
   const classes = useStyles();

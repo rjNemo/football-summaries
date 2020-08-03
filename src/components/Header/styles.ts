@@ -1,19 +1,9 @@
-import React, { FC } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Link from "@material-ui/core/Link";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
 import {
   createStyles,
   fade,
   Theme,
   makeStyles,
 } from "@material-ui/core/styles";
-import SportsSoccerIcon from "@material-ui/icons/SportsSoccer";
-import SearchIcon from "@material-ui/icons/Search";
-import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -72,35 +62,4 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Header: FC<{ title: string }> = ({ title }) => {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <AppBar position="static" color="transparent">
-        <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
-            <Link component={RouterLink} to="/" color="primary">
-              <SportsSoccerIcon /> {title}
-            </Link>
-          </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </div>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
-};
-
-export default Header;
+export default useStyles;
