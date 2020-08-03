@@ -11,7 +11,7 @@ import {
   Theme,
   makeStyles,
 } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
+import SportsSoccerIcon from "@material-ui/icons/SportsSoccer";
 import SearchIcon from "@material-ui/icons/Search";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -77,19 +77,11 @@ const Header: FC<{ title: string }> = ({ title }) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="transparent">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            <Link component={RouterLink} to="/" color="secondary">
-              {title}
+            <Link component={RouterLink} to="/" color="primary">
+              <SportsSoccerIcon /> {title}
             </Link>
           </Typography>
           <div className={classes.search}>
