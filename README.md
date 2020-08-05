@@ -1,44 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Football summaries
 
-## Available Scripts
+See free video summaries of the latest football games.
 
-In the project directory, you can run:
+## Getting Started
 
-### `yarn start`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+You need to have installed the following tools:
 
-### `yarn test`
+- Node.js
+- Npm or Yarn
+- React
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installing
 
-### `yarn build`
+To run your own copy clone the repo and run
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```shell
+yarn install
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+And run it with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn start
+```
 
-### `yarn eject`
+End with an example of getting some data out of the system or using it for a little demo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Deployment
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Deploy this using [Netlify](https://netlify.com) or [Vercel](https://vercel.com).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Built With
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [React](https://reactjs.org) - The web framework used
+- [Scorebat API](https://www.scorebat.com) - Where the games come from
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/rjNemo/football-app/tags).
+
+## Authors
+
+- **Ruidy** - _Initial work_ - [Github](https://github.com/rjNemo)
+
+See also the list of [contributors](https://github.com/rjNemo/football-app/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
