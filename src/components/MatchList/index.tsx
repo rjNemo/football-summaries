@@ -13,7 +13,7 @@ const MatchList: FC<IGameState> = ({ games, loading }) =>
     <Container>
       <Grid container justify="center" spacing={3}>
         {games.map((game, i) => (
-          <Grid key={i} item sm={6} md={3}>
+          <Grid key={i} item sm={6} md={4}>
             <MatchItem {...game} id={i} />
           </Grid>
         ))}
