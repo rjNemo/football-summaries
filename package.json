@@ -13,7 +13,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "@types/react-router-dom": "^5.3.3",
-    "axios": "^0.21.2",
+    "axios": "^1.6.0",
     "moment": "^2.29.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
